@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ma Page</title>
+            <style>
+                body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                section {
+                    margin: 20px;
+                }
+            </style>
+        </head>
+        
+        <body>
+        
+            <header>
+                <h1>ELF Company 💅🏻 </h1>
+            </header>
+        
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <section id="image">
+                    <!-- Insérez votre contenu/image ici -->
+                    <h2>Image</h2>
+                
+
+
+
+                    <div style="display: flex; justify-content: space-around; width: 100%;">
+                        <section id="image">
+                        
+                            <!-- Le formulaire de contact -->
+                            <form action="hh.php" method="post">
+                                <input type="submit" value="Contacter" />
+                            </form>
+                        </section>
+                
+                        <!-- Autres sections ... -->
+                
+                    </div>
+
+                <button onclick="location.href='image.html'">Voir</button>
+            </section>
+            <html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page d'Accueil</title>
+</head>
+<body>
+
+
+
+
+</body>
+</html>
+
+
+            
+                <section id="tarif">
+                    <!-- Insérez vos tarifs ou informations ici -->
+                    <h2>Tarif</h2>
+                    <button onclick="location.href='A REMPLIR'">Voir</button>
+                </section>
+        
+                <section id="contact">
+                    <!-- Insérez vos informations de contact ici -->
+                    <h2>Contact</h2>
+                    <button onclick="location.href='A REMPLIR'">Voir</button>
+                </section>
+                <section id="prise de rdv ">
+                    <!-- Insérez vos tarifs ou informations ici -->
+                    <h2>rdv </h2>
+                    <button onclick="location.href='A REMPLIR'">Voir</button>
+                </section>
+            </div>
+        
+        </body>
+        </html>
+<head>
+	<title>ELF Company</title>
+    <meta charset = "utf-8">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+    <h1 id="header"></h1>
+	<script>
+		// Sélectionne l'élément h1
+		var header = document.getElementById("header");
+
+		// Crée un élément img avec la source de votre logo
+		var logo = document.createElement("img");
+		logo.src = 'file:///Users/chaimabenfarhat/Downloads/projet%202/saloncoifure.jpg';
+	
+		// Ajoute l'élément img à l'intérieur de l'élément h1
+		header.innerHTML = "";
+        header.appendChild(logo);
+	</script>
+    <style>
+      body {
+			background-color: #F4F4F4;
+			background-image: url('saloncoifure.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+      
+      h1 {
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-size: 36px;
+		color: #7e2d63;
+	}
+
+    h3 {
+		text-align: center;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-size: 20px;
+		color: #ded6db;
+	}
+
+	#post-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+	}
+
+	#post-title {
+		font-size: 24px;
+		font-weight: bold;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 2px solid #000000;
+		border-radius: 5px;
+		width: 80%;
+	}
+
+	#post-content {
+		font-size: 18px;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 2px solid #000000;
+		border-radius: 5px;
+		width: 80%;
+		height: 200px;
+	}
+
+	button[type="submit"] {
+		background-color: #060109;
+		color: #decfd3;
+		font-size: 20px;
+		padding: 10px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		width: 80%;
+		margin-top: 10px;
+	}
+
+	button[type="submit"]:hover {
+		background-color: #8f44720e;
+	}
+
+	.post {
+		background-color: #ede5ed;
+		padding: 20px;
+		margin-bottom: 20px;
+		border: 2px solid #000000;
+		border-radius: 5px;
+		width: 80%;
+	}
+
+	.post-title {
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		color: #282628;
+	}
+
+	.post-content {
+		font-size: 18px;
+	}
+    </style>
+	<h1></h1>
+    <h3>
+        prise de rendez-vous : 
+
+    </h3>
+	<div id="post-container"></div>
+	<form id="post-form">
+		<input type="text" id="post-title" placeholder="Titre">
+		<textarea id="post-content" placeholder="Contenu"></textarea>
+		<button type="submit">Publier</button>
+	</form>
+    <script>
+        $(document).ready(function() {
+	// Tableau pour stocker les articles
+	var posts = [];
+
+	// Fonction pour afficher tous les articles dans le DOM
+	function renderPosts() {
+		$('#post-container').empty();
+		for (var i = 0; i < posts.length; i++) {
+			var post = posts[i];
+			var $post = $('<div class="post"></div>');
+			var $postTitle = $('<h2 class="post-title"></h2>').text(post.title);
+			var $postContent = $('<p class="post-content"></p>').text(post.content);
+			$post.append($postTitle).append($postContent);
+			$('#post-container').append($post);
+		}
+	}
+
+	// Fonction pour ajouter un nouvel article
+	function addPost(title, content) {
+		var post = {
+			title: title,
+			content: content
+		};
+		posts.push(post);
+		renderPosts();
+	}
+
+	// Écouteur d'événements pour le formulaire de publication
+	$('#post-form').submit(function(event) {
+		event.preventDefault();
+		var title = $('#post-title').val();
+		var content = $('#post-content').val();
+		addPost(title, content);
+		$('#post-title').val('');
+		$('#post-content').val('');
+	});
+});
+let bouton = document.getElementById('submit-button');
+function alertemail(event) {
+  event.preventDefault(); // empêche la soumission du formulaire
+  const postContent = document.getElementById('post-content').value.trim();
+  if (postContent.trim() === "") { // vérifie si le champ de texte est vide
+    alert("Le contenu ne peut pas être vide !");
+    return; // interrompt la fonction si le champ de texte est vide
+  }
+  if (postContent.includes("veux-tu m'épouser?")) {
+    if (confirm("OUIIIIIIIII!!!❤️ ❤️ ❤️")) {
+      document.getElementById('post-content').value = "j'ai dis oui t'attends quoi ?"; // efface le contenu du texte
+      return; // interrompt la fonction si l'utilisateur clique sur "OK"
+    }
+  }
+  alert("Publication validée !");
+  // Ici, on pourrait ajouter le code pour publier le contenu
+}
+
+document.getElementById('post-form').addEventListener('submit', alertemail);
+
+var btn = document.getElementById("submit");
+
+function envoie(submit) {
+  var email = document.getElementById("post-content").value;
+
+  if (email.trim() === "veux-tu m'épouser ?") 
+    alert("ouiiiiiiiiiiiiiii 💌");
+    else 
+    alert("envoyer ! ");
+}
+btn.addEventListener("click",envoie);
+
+//let boutonn = document.getElementById('submit-button');
+//function alertemail(event) {
+  //event.preventDefault(); // empêche la soumission du formulaire
+  //const postTitle = document.getElementById('post-title').value;
+  //if (postTitle.trim() === "") { // vérifie si le champ de texte est vide
+    //alert("Le contenu ne peut pas être vide !");
+    //return; // interrompt la fonction si le champ de texte est vide }
+  //if (postTitle.includes("tg")) {
+    //if (confirm("Vous ne pouvez pas publier ce contenu !")) {
+      //document.getElementById('post-title').value = ""; // efface le contenu du texte
+      //return; // interrompt la fonction si l'utilisateur clique sur "OK"}}
+//  alert("Publication validée !");
+  // Ici, on pourrait ajouter le code pour publier le contenu}
+
+//document.getElementById('post-form').addEventListener('submit', alertemail);
+
+    </script>
+</body>
+</html>
